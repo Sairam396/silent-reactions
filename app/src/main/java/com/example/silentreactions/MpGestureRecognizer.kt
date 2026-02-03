@@ -3,6 +3,7 @@ package com.example.silentreactions
 import android.content.Context
 import com.google.mediapipe.framework.image.MPImage
 import com.google.mediapipe.tasks.core.BaseOptions
+import com.google.mediapipe.tasks.core.Delegate
 import com.google.mediapipe.tasks.vision.core.RunningMode
 import com.google.mediapipe.tasks.vision.gesturerecognizer.GestureRecognizer
 
@@ -16,6 +17,7 @@ class MpGestureRecognizer(
     init {
         val baseOptions = BaseOptions.builder()
             .setModelAssetPath("gesture_recognizer.task")
+            .setDelegate(Delegate.CPU) // To Stabilize native crashes
             .build()
 
         val options = GestureRecognizer.GestureRecognizerOptions.builder()

@@ -11,7 +11,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.silentreactions"
+        applicationId = "com.example.com.sairam.silentreactions"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
